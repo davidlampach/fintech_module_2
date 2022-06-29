@@ -1,4 +1,4 @@
-# Fintech Bootcamp Module 2
+## Fintech Bootcamp Module 2
 
 This application returns a list of qualifying loans after lender data is input to determine if lender qualifies for any of the loans contained within the daily rate sheet.
 
@@ -17,8 +17,18 @@ To install this application, copy the module 2 folder onto a system that has Pyt
 
 ## Usage
 
-run "python app.py" in the module 2 folder.
+run "python app.py" in the module 2 folder. 
 
+follow the prompts, input path to rate sheet, and have the answers to the following questions ready
+
+
+? What's your credit score? 
+? What's your current amount of monthly debt?
+? What's your total monthly income?
+? What's your desired loan amount?
+? What's your home value?
+
+After answering these questions, the software will ask you if you'd like to export a CSV file.  If yes, it will prompt you for a path and file name.  
 ---
 
 ## Contributors
