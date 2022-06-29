@@ -23,6 +23,8 @@ from qualifier.filters.credit_score import filter_credit_score
 from qualifier.filters.debt_to_income import filter_debt_to_income
 from qualifier.filters.loan_to_value import filter_loan_to_value
 
+import csv
+
 
 def load_bank_data():
     """Ask for the file path to the latest banking data and load the CSV file.
@@ -110,6 +112,17 @@ def save_qualifying_loans(qualifying_loans):
     """
     # @TODO: Complete the usability dialog for savings the CSV Files.
     # YOUR CODE HERE!
+
+    print ('To write the list of qualifying loans to a CSV file, please enter a path -->')
+    CSV_output_path = questionary.text("Please enter a path and filename to output list of qualifying loans as a file -->").ask()
+    CSV_output_file = open(CSV_output_path, 'w')
+    writer = csv.writer(CSV_output_file)
+
+    for qualifying_loan in qualifying_loans:
+
+        writer.writerow(row)
+
+    return TRUE
 
 
 def run():
