@@ -17,14 +17,26 @@ def load_csv(csvpath):
         A list of lists that contains the rows of data from the CSV file.
 
     """
+    
+    
+    
     with open(csvpath, "r") as csvfile:
+        
         data = []
+        
         csvreader = csv.reader(csvfile, delimiter=",")
 
+   
         # Skip the CSV Header
+        
         next(csvreader)
 
         # Read the CSV data
         for row in csvreader:
             data.append(row)
+            
+            
     return data
+
+
+

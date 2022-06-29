@@ -26,6 +26,8 @@ from qualifier.filters.loan_to_value import filter_loan_to_value
 import csv
 
 
+
+
 def load_bank_data():
     """Ask for the file path to the latest banking data and load the CSV file.
 
@@ -105,22 +107,30 @@ def find_qualifying_loans(bank_data, credit_score, debt, income, loan, home_valu
 
 
 def save_qualifying_loans(qualifying_loans):
+    
     """Saves the qualifying loans to a CSV file.
 
     Args:
         qualifying_loans (list of lists): The qualifying bank loans.
     """
-    # @TODO: Complete the usability dialog for savings the CSV Files.
-    # YOUR CODE HERE!
 
-    proceed_with_write_CSV = questionary.confirm("Do you want to save list of qualifying loans?").ask()
+    #Inquire whether user wants to write qualifying loans to CSV
+    
+    proceed_with_write_csv = questionary.confirm("Do you want to save the list of qualifying loans?").ask()
 
-    if proceed_with_write_CSV is True:
+    if proceed_with_write_csv is True: #If true write CSV file
 
-        CSV_output_path = questionary.text("Please enter a path and filename to output list of qualifying loans as a file -->").ask()
-        CSV_output_file = open(CSV_output_path, 'w')
-        writer = csv.writer(CSV_output_file)
+        csv_output_path = questionary.text("Please enter a path and filename to output list of qualifying loans as a file -->").ask()
+        csv_output_file = open(csv_output_path, 'w')
+        writer = csv.writer(csv_output_file)
 
+        #Add header to qualifying loans CSV
+        
+        header = ['Lender','Max Loan Amount','Max LTV','Max DTI','Min Credit Score','Interest Rate']
+        writer.writerow(header)
+
+        #Add the qualifying loans row by row to CSV
+        
         for qualifying_loan in qualifying_loans:
 
             writer.writerow(qualifying_loan)
@@ -129,15 +139,16 @@ def save_qualifying_loans(qualifying_loans):
 
     else:
 
-        print ("This program has ended")
+        print ("Thank you, the program has ended successfully") #If user does not want to write CSV exit with message
         return
+
 
 def run():
     """The main function for running the script."""
 
     # Load the latest Bank data
     bank_data = load_bank_data()
-
+   
     # Get the applicant's information
     credit_score, debt, income, loan_amount, home_value = get_applicant_info()
 
