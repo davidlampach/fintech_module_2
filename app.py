@@ -113,16 +113,18 @@ def save_qualifying_loans(qualifying_loans):
     # @TODO: Complete the usability dialog for savings the CSV Files.
     # YOUR CODE HERE!
 
-    print ('To write the list of qualifying loans to a CSV file, please enter a path -->')
+    proceed_with_write_CSV = questionary.confirm("Do you want to save list of qualifying loans?").ask()
+    #print ('To write the list of qualifying loans to a CSV file, please enter a path -->')
+
     CSV_output_path = questionary.text("Please enter a path and filename to output list of qualifying loans as a file -->").ask()
     CSV_output_file = open(CSV_output_path, 'w')
     writer = csv.writer(CSV_output_file)
 
     for qualifying_loan in qualifying_loans:
 
-        writer.writerow(row)
+        writer.writerow(qualifying_loan)
 
-    return TRUE
+    return
 
 
 def run():
