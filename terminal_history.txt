@@ -1,0 +1,128 @@
+    1  conda
+    2  ls
+    3  anaconda
+    4  ls
+    5  cd Desktop
+    6  ls
+    7  conda
+    8  cd ../Downloads/
+    9  ;s
+   10  ls
+   11  sudo sh Anaconda3-2022.05-Linux-x86_64.sh 
+   12  sh Anaconda3-2022.05-Linux-x86_64.sh 
+   13  conda
+   14  ls
+   15  cd anaconda3
+   16  ls
+   17  conda
+   18  cd bin
+   19  ls
+   20  ls -l
+   21  ./conda
+   22  ls
+   23  cd Desktop/
+   24  ls
+   25  mkdir module2
+   26  cd module2
+   27  git init
+   28  git remote add origin
+   29  git remote add origin https://github.com/davidlampach/fintech_module_2.git
+   30  ls
+   31  git add .
+   32  git commit -m 'This is the initial commit with default module files'
+   33  git config --global user.email "davidlampach@gmail.com"
+   34  git config --global user.name "David Lampach"
+   35  git commit -m 'This is the initial commit with default module files'
+   36  git push origin master
+   37  git push origin main
+   38  pip3 install fire
+   39  pip install fire
+   40  sudo apt-get install python3-pip
+   41  pip install fire
+   42  pip3 install fire
+   43  pip install questionary
+   44  ls
+   45  python3 app.py
+   46  git .add
+   47  git add.
+   48  git add .
+   49  git commit -m 'Commit toward end of save qualifying loans function prep'
+   50  git push origin master
+   51  python3 app.py
+   52  ls
+   53  cat test.csv 
+   54  rm test.csv 
+   55  python3 app.py
+   56  ls
+   57  cat test.csv 
+   58  python3 app.py
+   59  ls
+   60  ls -l
+   61  cat test.csv 
+   62  python3 app.py
+   63  git add .
+   64  git commit -m 'adding in questionary confirm whether save loan CSV'
+   65  git push origin master
+   66  python3 app.py
+   67  git add .
+   68  git commit -m "added if statement to end origram if user doesnt want to save CSV"
+   69  git push origin master
+   70  history
+   71  cat test.csv
+   72  cd data
+   73  ls
+   74  cat daily
+   75  cat daily_rate_sheet.csv 
+   76  python3 app.py
+   77  cd ..
+   78  ls
+   79  python3 app.py
+   80  cat test.csv 
+   81  python3 app.py
+   82  cat test.csv 
+   83  python3 app.py
+   84  ls
+   85  cat test.csv 
+   86  python3 app.py
+   87  ls
+   88  cat test2.csv 
+   89  python3 app.py
+   90  ls -l
+   91  cat test4.csv 
+   92  python3 app.py
+   93  ls
+   94  cat test5.csv 
+   95  rm test*
+   96  ls -l
+   97  python3 app.py
+   98  ls
+   99  cat test.csv 
+  100  rm test*
+  101  python3 app.py
+  102  cat test.csv 
+  103  python3 app.py
+  104  cat test.csv 
+  105  python3 app.py
+  106  cat test.csv 
+  107  python3 app.py
+  108  cat test5.csv 
+  109  python3 app.py
+  110  cat test.csv
+  111  python3 app.py
+  112  cat test6.csv 
+  113  python3 app.py
+  114  cat test7.csv 
+  115  python3 app.py
+  116  cat test8.csv 
+  117  python3 app.py
+  118  cat test9.csv 
+  119  python3 app.py
+  120  cat test10.csv 
+  121  rm test*
+  122  ls
+  123  git add /
+  124  git add .
+  125  git commit -m "added header to CSV Output and added comments"
+  126  git push origin master
+  127  cat history | terminal_history.txt
+  128  history > terminal_history.txt
