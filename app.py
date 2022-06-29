@@ -114,18 +114,23 @@ def save_qualifying_loans(qualifying_loans):
     # YOUR CODE HERE!
 
     proceed_with_write_CSV = questionary.confirm("Do you want to save list of qualifying loans?").ask()
-    #print ('To write the list of qualifying loans to a CSV file, please enter a path -->')
 
-    CSV_output_path = questionary.text("Please enter a path and filename to output list of qualifying loans as a file -->").ask()
-    CSV_output_file = open(CSV_output_path, 'w')
-    writer = csv.writer(CSV_output_file)
+    if proceed_with_write_CSV is True:
 
-    for qualifying_loan in qualifying_loans:
+        CSV_output_path = questionary.text("Please enter a path and filename to output list of qualifying loans as a file -->").ask()
+        CSV_output_file = open(CSV_output_path, 'w')
+        writer = csv.writer(CSV_output_file)
 
-        writer.writerow(qualifying_loan)
+        for qualifying_loan in qualifying_loans:
 
-    return
+            writer.writerow(qualifying_loan)
 
+        return
+
+    else:
+
+        print ("This program has ended")
+        return
 
 def run():
     """The main function for running the script."""
